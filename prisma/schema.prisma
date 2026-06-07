@@ -13,10 +13,10 @@ datasource db {
 }
 
 model User{
-  id Int @id @default(autoincrement())
-  name String
-  agr Int
-  cpf String @unique
-  email String @unique
-  password String
+  id        Int      @id @default(autoincrement())
+  name      String
+  agr       Int      
+  cpf       String   @unique
+  email     String   @unique
+  password  String
 }
