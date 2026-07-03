@@ -1,10 +1,12 @@
-const express = require('express');
-const UserRoute = require('./routes/UserRouter');
-
+const express = require("express");
 const app = express();
+
+const UserRout = require("./routes/UserRouter");
+const RegisterRout = require("./routes/AuthRouter");
 
 app.use(express.json());
 
-app.use('/user', UserRoute);
+app.use("/auth", RegisterRout);
+app.use("/users", UserRout);
 
-module.export = app;
+module.exports = app;
